@@ -112,10 +112,10 @@ cmake --build .
 
 ## Building on Mac OS
 
- * Install the dependencies; for example, using Homebrew: (Note: Tested with boost 1.84.0, wxmac (wxwidgets) 3.2.4, hunspell 1.7.2, cmake 3.28.3, dylibbundler 1.0.5.)
+ * Install the dependencies; for example, using Homebrew: (Note: Tested with boost 1.92.0, wxmac (wxwidgets) 3.3.3, hunspell 1.7.3, cmake 4.4.2, dylibbundler 1.0.5.)
 
 ```
-brew install boost wxwidgets hunspell cmake dylibbundler
+brew install boost wxwidgets hunspell cmake dylibbundler pkg-config
 ```
 
  * Then use cmake to build:
@@ -127,10 +127,8 @@ cmake --build .
 ```
 
  Use `CMAKE_BUILD_TYPE=Debug` for a debug build.
- * Finally, copy the resources to a SharedSupport directory and run the executable:
+ * Finally, run the application bundle:
 
 ```
-mkdir magicseteditor.app/Contents/SharedSupport
-cp -r ../resource magicseteditor.app/Contents/SharedSupport
 open ./magicseteditor.app
 ```
